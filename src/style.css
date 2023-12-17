@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: #1d4ed8;
+    font-size: 2em;
+    justify-content: center;
+    grid-column: 1 / 3;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 0.7fr 6fr;
+    grid-template-columns: 1.3fr 5fr;
+    background-color: #0a0a0a;
+}
+
+#sidebar{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    background-color: #164e63;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
