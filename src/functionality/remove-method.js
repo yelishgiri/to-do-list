@@ -1,5 +1,7 @@
-export const remove = {
+const remove = {
     remove(){
-            
     }    
 }
+
+
+export { remove }

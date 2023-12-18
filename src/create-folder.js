@@ -1,14 +1,23 @@
-import createTodoItems from "./create-to-do.js";
+import { remove } from "./functionality/remove-method.js"
+import { renderProjectDialogBox } from "./dom-elements/project-dialog-box.js"
 
-export default class createFolder{
-    constructor(folderName, itemsArray){
-        this.folderName = folderName;
-        this.array = itemsArray;
+
+
+class CreateFolders {
+    constructor()
+    {
+        this.folders = [];
     }
+    addFolders(name){
+        this.folders.push({
+            name: name,
+            toDoItems: []
+        })
+
+    }
+
 }
 
-toDoCollection = new createFolder("nameReceived",[])
+console.log(new CreateFolders.prototype.addFolders("John"));
 
-function addToDoListItems(collectionToDoItems){
-    toDoCollection.array[toDoCollection.array] = new createTodoItems(itemName,description,dueDate,priority,notes)
-}
+export { CreateFolders }

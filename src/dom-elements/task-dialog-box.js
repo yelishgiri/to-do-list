@@ -13,6 +13,12 @@ taskDialogButton.addEventListener("click", () => {
 taskDialogCloseButton.addEventListener("click", () => {
     dialogTask.close();
 })
+
+
+taskDialogSubmit.addEventListener("click",(event) => {
+    event.preventDefault();
+    dialogTask.close();
+})
 });
 
 

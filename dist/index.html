@@ -1,1 +1,59 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Todo List</title><script defer="defer" src="main.js"></script></head><body><header>To Do List</header><div id="sidebar"><button>Today</button> <button>Week</button> <button class="createProject">Add Project</button><dialog id="formForProject"><label>Project: <input id="projectName" name="projectName"></label> <button type="button" class="closeProject">Remove</button> <button type="submit" class="submitProject">Submit</button></dialog></div><div id="content"><div class="tasks"><dialog id="formForToDo"><form><label>Task: <input id="taskName" name="taskName" required></label> <label>Description: <input id="taskDescription" name="taskDescription" required></label> <label>Due Date: <input type="datetime-local" id="taskDueDate" name="taskDueDate" required></label> <label>Priority: <select id="taskPriority" name="taskPriority" required><option value="priorityNormal" selected="selected">Normal</option><option value="priorityUrgent">Urgent</option></select></label> <button type="button" class="closeTask">Close</button> <button type="submit" class="submitTask">Submit</button></form></dialog></div><button class="createTask">Create Task</button></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+<script defer src="main.js"></script></head>
+<body>
+    <header>To Do List</header>
+        <div id="sidebar">
+            <button> Today </button>
+            <button> Week </button>
+            <div class="Projects">
+                <h5>Projects</h5>
+            </div>
+            <button class="createProject"> Add Project </button>
+            <dialog id="formForProject">
+                <label>
+                    Project: 
+                    <input type="text" id="projectName" name="projectName">
+                </label>
+                <button type="button" class="closeProject">Close</button>
+                <button type="submit" class="submitProject">Submit</button>
+            </dialog>
+        </div>
+        <div id="content">
+            <div class="tasks">
+                <dialog id="formForToDo">
+                    <form>
+                        <label>
+                            Task: 
+                            <input type="text" id="taskName" name="taskName" required>
+                        </label>
+        
+                        <label>
+                            Description: 
+                            <input type="text" id="taskDescription" name="taskDescription" required>
+                        </label>
+                        <label>
+                            Due Date:
+                            <input type="datetime-local" id="taskDueDate" name="taskDueDate" required>
+                        </label>
+                        <label>
+                            Priority:
+                            <select id="taskPriority" name="taskPriority" required>
+                                <option value="priorityNormal" selected>Normal</option>
+                                <option value="priorityUrgent">Urgent</option>
+                            </select>
+                        </label>
+                        <button type="button" class="closeTask">Close</button>
+                        <button type="submit" class="submitTask">Submit</button>
+                    </form>
+                </dialog>
+            </div>
+        <button class="createTask">Create Task</button>
+        </div>
+    </div>
+</body>
+</html>

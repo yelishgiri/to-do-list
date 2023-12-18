@@ -1,6 +1,10 @@
-import { remove } from "./functionality/remove-method";
+import { remove } from "./functionality/remove-method.js";
+import { createFolders } from "./create-folder.js";
 
-export default class createTodoItems{
+
+const todoItems = []
+
+ class createTodoItems{
     constructor(itemName,description,dueDate,priority,notes){
         this.item = itemName;
         this.description = description;
@@ -13,4 +17,7 @@ export default class createTodoItems{
 }
 
 
+function addToDoItems() {
+    folder[folder.length[todoItems[todoItems.length]]] = new createTodoItems(itemName, description, dueDate, priority, notes)
+}
 
