@@ -1,11 +1,9 @@
 const renderProjectDialogBox = (function() {
 
 
-    const projectDialogButton = document.querySelector('.createProject')
+    const projectDialogButton = document.querySelector('.sidebarProject')
     const projectDialogCloseButton = document.querySelector('.closeProject')
-    const projectDialogSubmit = document.querySelector('.submitProject')
     const dialogProject = document.getElementById('formForProject')
-    let execution = false;
 
 
     projectDialogButton.addEventListener("click", () => {
@@ -16,13 +14,7 @@ const renderProjectDialogBox = (function() {
         dialogProject.close();
     })
 
-     projectDialogSubmit.addEventListener("click", (event) => {
-        event.preventDefault();
-        dialogProject.close();
-        execution = true;
-    })
 
- return execution;
 })
 
 

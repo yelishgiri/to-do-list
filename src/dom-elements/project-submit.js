@@ -1,12 +1,20 @@
-import { createFolders } from "../create-folder.js";
-
+import { addProjects } from "../create-projects.js";
+import { renderProjectToDOM } from "./print-project.js";
 
 
 const callProjectSubmitButton = (function (){
+
+
+    const projectName = document.querySelector('#projectName')
+    const projectDialogSubmit = document.querySelector('.submitProject')
+    const dialogProject = document.getElementById('formForProject')
+    
+
     projectDialogSubmit.addEventListener("click", (event) => {
         event.preventDefault();
         dialogProject.close();
-        new createFolders(,)
+        addProjects(projectName.value)
+        renderProjectToDOM();
 
     })
 }) 
