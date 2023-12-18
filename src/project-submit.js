@@ -1,5 +1,5 @@
-import { addProjects } from "../create-projects.js";
-import { renderProjectToDOM } from "./print-project.js";
+import { addProjects } from "./create-projects.js";
+import { renderProjectToDOM } from "./dom-elements/print-project.js";
 
 
 const callProjectSubmitButton = (function (){

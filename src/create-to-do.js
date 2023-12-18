@@ -1,10 +1,6 @@
-import { remove } from "./functionality/remove-method.js";
-import { createFolders } from "./create-folder.js";
+import { projects } from "./create-projects.js";
 
-
-const todoItems = []
-
- class createTodoItems{
+ class createTodo{
     constructor(itemName,description,dueDate,priority,notes){
         this.item = itemName;
         this.description = description;
@@ -17,7 +13,15 @@ const todoItems = []
 }
 
 
-function addToDoItems() {
-    folder[folder.length[todoItems[todoItems.length]]] = new createTodoItems(itemName, description, dueDate, priority, notes)
-}
+const addTodo = (function(itemName, description, dueDate, priority, notes){
+    projects.forEach((object) => {
+        object.todoItems[object.todoItems.length] = new createTodo(itemName, description, dueDate, priority, notes)
+        console.log(object.todoItems[length]);
+    })
+})
+
+export { addTodo }
+
+
+
 
