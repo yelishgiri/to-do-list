@@ -15,7 +15,7 @@ const callTaskSubmitButton = (function() {
     taskDialogSubmit.addEventListener("click",(event) => {
         event.preventDefault();
         dialogTask.close();
-        addTodo("hello","hello","hello","hehe","hehe")
+        addTodo(taskName.value,taskDescription.value,taskDueDate.value,taskPriority.value,taskNotes.value)
     })
     
 

@@ -1,6 +1,6 @@
 import { projects } from "./create-projects.js";
 
- class createTodo{
+ class createTodo {
     constructor(itemName,description,dueDate,priority,notes){
         this.item = itemName;
         this.description = description;
@@ -17,6 +17,7 @@ const addTodo = (function(itemName, description, dueDate, priority, notes){
     projects.forEach((object) => {
         object.todoItems[object.todoItems.length] = new createTodo(itemName, description, dueDate, priority, notes)
         console.log(object.todoItems[length]);
+
     })
 })
 
