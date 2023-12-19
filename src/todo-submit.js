@@ -1,5 +1,5 @@
 import { addTodo } from "./create-to-do.js";
-
+import { renderToDosToDom } from "./dom-elements/print-todos.js";
 
 const callTaskSubmitButton = (function() {
     
@@ -16,6 +16,7 @@ const callTaskSubmitButton = (function() {
         event.preventDefault();
         dialogTask.close();
         addTodo(taskName.value,taskDescription.value,taskDueDate.value,taskPriority.value,taskNotes.value)
+        renderToDosToDom();
     })
     
 

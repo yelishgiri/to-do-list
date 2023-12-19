@@ -22,7 +22,7 @@ body{
     display: grid;
     grid-template-rows: 0.7fr 6fr;
     grid-template-columns: 1.3fr 5fr;
-    background-color: #0a0a0a;
+    background-color: white;
 }
 
 #sidebar{
@@ -34,5 +34,45 @@ body{
     gap: 20px;
 }
 
+dialog{
+    padding:40px;
+    position: absolute;
+    margin-left: 600px;
+    margin-top: 250px;
+    border: white;
+    border-radius: 6px;
+}
 
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+ }
+ 
+ 
+ ::backdrop{
+     background-color: #a3a3a3;
+     opacity: 0.75;
+ 
+ }
+
+ 
+ .tasks{
+    color: blue;
+ }
+
+.divContent{
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+}
 
