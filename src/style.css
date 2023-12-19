@@ -70,9 +70,10 @@ label{
     color: blue;
  }
 
-.divContent{
+#divContent{
     display: flex;
     padding: 20px;
     justify-content: space-around;
 }
+
 

@@ -2,7 +2,7 @@ import { projects } from "./create-projects.js";
 
  class createTodo {
     constructor(itemName,description,dueDate,priority,notes){
-        this.itemTo = itemName;
+        this.item = itemName;
         this.description = description;
         this.dueDate = dueDate
         this.priority = priority;
