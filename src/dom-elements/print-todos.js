@@ -3,7 +3,7 @@ import { projects } from "../create-projects.js";
 const renderToDosToDom = (function() {
     projects.forEach((object) => {
 
-        if(object.name === "Hello"){
+        
             const appendDiv = document.querySelector(`#${object.name}`)
             if(document.contains(document.getElementById('divContent'))){
                 document.getElementById('divContent').remove()
@@ -22,11 +22,11 @@ const renderToDosToDom = (function() {
                     divPriority.textContent = `Priority: ${object.priority}`
                     divNotes.textContent = `Notes: ${object.notes}`
                     div.append(divTask,divDescription,divDuedate,divPriority,divNotes)
-                    appendDiv.append(div) 
+                    appendDiv.appendChild(div) 
                   
         }
         )
-        }
+        
     })
 
 })
