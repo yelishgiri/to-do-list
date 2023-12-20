@@ -13,10 +13,12 @@ import { projects } from "./create-projects.js";
 }
 
 
-const addTodo = (function(itemName, description, dueDate, priority, notes){
+const addTodo = (function(objectName,itemName, description, dueDate, priority, notes){
     projects.forEach((object) => {
+        if(object.name === objectName){
         object.todoItems[object.todoItems.length] = new createTodo(itemName, description, dueDate, priority, notes)
         console.log(object.todoItems[length]);
+        }
 
     })
 })

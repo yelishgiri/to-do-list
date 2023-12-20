@@ -6,9 +6,11 @@ import { renderToDosToDom } from "./print-todos.js"
 const sidebar = document.querySelector('.projects')
 const content = document.querySelector('#content')
 const renderProjectToDOM = (function() {
-    projects.forEach((object) => {
+    
+        
     const projectName = document.createElement('button')
-    projectName.setAttribute('class','projectCards')
+    projectName.setAttribute('id','projectCards')
+    projectName.setAttribute('class',`${projects[projects.length-1].name}`)
     projectName.textContent = `${projects[projects.length-1].name}`
     const projectDiv = document.createElement('div')
     projectDiv.setAttribute('id',`${projectName.textContent}`)   
@@ -18,17 +20,25 @@ const renderProjectToDOM = (function() {
     
 
 
-
-    const eventHandlerForDynamicButton = function(){
-        projectName.addEventListener('click', () => {
-          const div = document.createElement('div')
-          content.appendChild(div)
-          div.setAttribute('id',`${object.name}`)
-          renderToDosToDom();
+    projects.forEach((object) => {
+        
+        if(document.contains(document.querySelector('#projectCards')))
+        {
+        const eventListener = document.querySelectorAll('#projectCards')
+        console.log(eventListener)
+        eventListener.forEach((list) => {
+            list.addEventListener("click", (e) => {
+            projects.forEach((object) => {
+                if(e.target.className === object.name){
+                    const div = document.createElement("div")
+                    
+                }   
+        
         })
-    }
+    
+    })})
+        }
 
-    eventHandlerForDynamicButton();
 }
     )
 

@@ -2,13 +2,18 @@ import { projects } from "../create-projects.js";
 
 const renderToDosToDom = (function() {
     projects.forEach((object) => {
+        if(document.contains(document.getElementById(`#${object.name}`))){
+            document.getElementById(`#${object.name}`).remove();
+            console.log()
+        }
 
         
             const appendDiv = document.querySelector(`#${object.name}`)
-            if(document.contains(document.getElementById('divContent'))){
-                document.getElementById('divContent').remove()
-            }
             object.todoItems.forEach((object) => {
+                if(document.contains(document.getElementById('divContent'))){
+                    document.getElementById('divContent').remove()
+                }
+                    
                     const div = document.createElement('div')
                     div.setAttribute("id","divContent")
                     const divTask = document.createElement('div')
@@ -26,8 +31,8 @@ const renderToDosToDom = (function() {
                   
         }
         )
-        
-    })
+        }
+    )
 
 })
 
