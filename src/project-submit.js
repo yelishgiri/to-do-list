@@ -15,9 +15,8 @@ const callProjectSubmitButton = (function (){
         dialogProject.close();
         addProjects(projectName.value)
         renderProjectToDOM();
-
     })
-}) 
+}); 
 
 
 export { callProjectSubmitButton }

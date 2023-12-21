@@ -1,10 +1,12 @@
 import { projects } from "../create-projects.js"
 import { renderToDosToDom } from "./print-todos.js"
+import { callTaskSubmitButton } from "../todo-submit.js"
+
 
 
 
 const sidebar = document.querySelector('.projects')
-const content = document.querySelector('#content')
+const container = document.querySelector('#container')
 const renderProjectToDOM = (function() {
     
         
@@ -25,13 +27,32 @@ const renderProjectToDOM = (function() {
         if(document.contains(document.querySelector('#projectCards')))
         {
         const eventListener = document.querySelectorAll('#projectCards')
-        console.log(eventListener)
         eventListener.forEach((list) => {
             list.addEventListener("click", (e) => {
             projects.forEach((object) => {
                 if(e.target.className === object.name){
-                    const div = document.createElement("div")
-                    
+                   if(document.contains(document.getElementById('content'))) 
+                   {
+                    document.getElementById('content').remove();
+                   }
+
+                   // For home or any projects container
+                   const contentDiv = document.createElement('div')
+                   contentDiv.setAttribute('id','content')
+                   contentDiv.textContent = `${object.name}`
+                   const indexForFolder = projects.length
+                   const indexForTodo = object.todoItems.length
+                   console.log(indexForFolder)
+                   console.log(indexForTodo)
+                   // For task to store div
+                   const contentTask = document.createElement('div')
+                   contentTask.setAttribute('class','contentTask')
+                   contentDiv.appendChild(contentTask);
+                    container.appendChild(contentDiv);
+                    renderToDosToDom();
+                
+
+                                  
                 }   
         
         })

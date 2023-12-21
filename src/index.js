@@ -4,7 +4,6 @@ import { renderProjectDialogBox } from './dom-elements/project-dialog-box.js';
 import { callProjectSubmitButton } from './project-submit.js';
 import { callTaskSubmitButton } from './todo-submit.js'
 
-import { projects } from './create-projects.js';
 
 
 

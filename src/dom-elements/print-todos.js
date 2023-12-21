@@ -1,18 +1,14 @@
 import { projects } from "../create-projects.js";
 
+
 const renderToDosToDom = (function() {
     projects.forEach((object) => {
-        if(document.contains(document.getElementById(`#${object.name}`))){
-            document.getElementById(`#${object.name}`).remove();
-            console.log()
-        }
 
-        
-            const appendDiv = document.querySelector(`#${object.name}`)
-            object.todoItems.forEach((object) => {
-                if(document.contains(document.getElementById('divContent'))){
-                    document.getElementById('divContent').remove()
-                }
+        const divContent = document.querySelector('#content')
+                if(object.name === divContent.textContent){
+                const appendDiv = document.querySelector('.contentTask')
+                console.log(appendDiv)
+                object.todoItems.forEach((object) => {
                     
                     const div = document.createElement('div')
                     div.setAttribute("id","divContent")
@@ -31,7 +27,7 @@ const renderToDosToDom = (function() {
                   
         }
         )
-        }
+        }}
     )
 
 })

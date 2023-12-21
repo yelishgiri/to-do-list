@@ -1,9 +1,13 @@
-import { addTodo } from "./create-to-do.js";
 import { projects } from "./create-projects.js";
+import { addTodo } from "./create-to-do.js";
+import { renderToDosToDom } from "./dom-elements/print-todos.js";
 
 
-const callTaskSubmitButton = (function() {
+const callTaskSubmitButton = (function(name) {
+
     
+    
+    console.log("hello")
     const dialogTask = document.getElementById('formForToDo') 
     const taskDialogSubmit = document.querySelector('.submitTask')
 
@@ -16,7 +20,19 @@ const callTaskSubmitButton = (function() {
     taskDialogSubmit.addEventListener("click",(event) => {
         event.preventDefault();
         dialogTask.close();
-        addTodo(taskName.value,taskDescription.value,taskDueDate.value,taskPriority.value,taskNotes.value)
+
+        
+
+
+
+        projects.forEach((object) => {
+            const divContent = document.querySelector('#content')
+            if(object.name === divContent.textContent)            
+            addTodo(taskName.value,taskDescription.value,taskDueDate.value,taskPriority.value,taskNotes.value)
+            renderToDosToDom();
+        })
+
+
 
     })
     
