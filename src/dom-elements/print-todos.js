@@ -1,5 +1,5 @@
 import { projects } from "../create-projects.js";
-
+import { remove } from "../functionality/remove.js";
 
 const renderToDosToDom = (function() {
     projects.forEach((object) => {
@@ -24,7 +24,7 @@ const renderToDosToDom = (function() {
                     divNotes.textContent = `Notes: ${object.notes}`
                     div.append(divTask,divDescription,divDuedate,divPriority,divNotes)
                     appendDiv.appendChild(div) 
-                  
+                    remove();
         }
         )
         }}

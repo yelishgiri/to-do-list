@@ -1,6 +1,5 @@
 import { projects } from "../create-projects.js"
 import { renderToDosToDom } from "./print-todos.js"
-import { callTaskSubmitButton } from "../todo-submit.js"
 
 
 
@@ -50,7 +49,6 @@ const renderProjectToDOM = (function() {
                    contentDiv.appendChild(contentTask);
                     container.appendChild(contentDiv);
                     renderToDosToDom();
-                
 
                                   
                 }   
