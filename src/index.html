@@ -1,61 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>To Do List</header>
-        <div id="sidebar">
-            <div class="projects">
-                <h5>Projects</h5>
-            </div>
-            <button class="sidebarProject"> Add Project </button>
-            <dialog id="formForProject">
-                <label>
-                    Project: 
-                    <input type="text" id="projectName" name="projectName" required>
-                </label>
-                <button type="button" class="closeProject">Close</button>
-                <button type="submit" class="submitProject">Submit</button>
-            </dialog>
-        </div>
-        <dialog id="formForToDo">
-            <form>
-                <label>
-                    Task: 
-                    <input type="text" id="taskName" name="taskName" required>
-                </label>
+    <div id="sidebar">
+      <div class="projects">
+        <h5>Projects</h5>
+      </div>
+      <button class="sidebarProject">Add Project</button>
+      <dialog id="formForProject">
+        <label>
+          Project:
+          <input type="text" id="projectName" name="projectName" required />
+        </label>
+        <button type="button" class="closeProject">Close</button>
+        <button type="submit" class="submitProject">Submit</button>
+      </dialog>
+    </div>
+    <dialog id="formForToDo">
+      <form>
+        <label>
+          Task:
+          <input type="text" id="taskName" name="taskName" required />
+        </label>
 
-                <label>
-                    Description: 
-                    <input type="text" id="taskDescription" name="taskDescription" required>
-                </label>
-                <label>
-                    Due Date:
-                    <input type="datetime-local" id="taskDueDate" name="taskDueDate" required>
-                </label>
-                <label>
-                    Priority: 
-                    <select id="taskPriority" name="taskPriority" required>
-                        <option value="Normal" selected>Normal</option>
-                        <option value="Urgent">Urgent</option>
-                    </select>
-                </label>
-                <label>
-                    Notes:
-                    <input type="text" id="taskNotes" name="taskNotes">
-                </label>
-                <button type="button" class="closeTask">Close</button>
-                <button type="submit" class="submitTask">Submit</button>
-            </form>
-        </dialog>
-    
-        <div id="container">
-        </div>
-        <div>
-        <button class="createTask">Create Task</button>
-            </div>
-</body>
+        <label>
+          Description:
+          <input
+            type="text"
+            id="taskDescription"
+            name="taskDescription"
+            required
+          />
+        </label>
+        <label>
+          Due Date:
+          <input
+            type="datetime-local"
+            id="taskDueDate"
+            name="taskDueDate"
+            required
+          />
+        </label>
+        <label>
+          Priority:
+          <select id="taskPriority" name="taskPriority" required>
+            <option value="Normal" selected>Normal</option>
+            <option value="Urgent">Urgent</option>
+          </select>
+        </label>
+        <label>
+          Notes:
+          <input type="text" id="taskNotes" name="taskNotes" />
+        </label>
+        <button type="button" class="closeTask">Close</button>
+        <button type="submit" class="submitTask">Submit</button>
+      </form>
+    </dialog>
+
+    <div id="container"></div>
+    <div>
+      <button class="createTask">Create Task</button>
+    </div>
+  </body>
 </html>

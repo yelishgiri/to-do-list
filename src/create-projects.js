@@ -1,21 +1,15 @@
-const projects = []
+const projects = [];
 
-
-class Projects{
-    constructor(name)
-    {
-        this.name = name
-    }
-    todoItems = []
+class Projects {
+  constructor(name) {
+    this.name = name;
+  }
+  todoItems = [];
 }
-
-
-
 
 const addProjects = function (name) {
-    projects[projects.length] = new Projects(name)
-    console.log(projects);
-}
+  projects[projects.length] = new Projects(name);
+  console.log(projects);
+};
 
-
-export { addProjects, projects }
+export { addProjects, projects };

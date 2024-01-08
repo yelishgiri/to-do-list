@@ -1,96 +1,96 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
+@font-face {
+  font-family: Inter;
+  src: url("./fonts/inter/Inter-Bold.ttf");
+}
 html,
-body{
-    height: 100%;
-    width: 100%;
+body {
+  height: 100%;
+  width: 100%;
 }
 
-header{
-    display: flex;
-    align-items: center;
-    background-color: #1d4ed8;
-    font-size: 2em;
-    justify-content: center;
-    grid-column: 1 / 3;
+header {
+  display: flex;
+  align-items: center;
+  background-color: #1d4ed8;
+  font-size: 2em;
+  justify-content: center;
+  grid-column: 1 / 3;
 }
 
-body{
-    display: grid;
-    grid-template-rows: 0.7fr 6fr;
-    grid-template-columns: 1.3fr 5fr;
-    background-color: white;
+body {
+  display: grid;
+  grid-template-rows: 0.7fr 6fr;
+  grid-template-columns: 1.3fr 5fr;
+  background-color: white;
+  font-family: Inter;
 }
 
-#sidebar{
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    background-color: #164e63;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+#sidebar {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background-color: #164e63;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-dialog{
-    padding:40px;
-    position: absolute;
-    margin-left: 600px;
-    margin-top: 100px;
-    border: white;
-    border-radius: 6px;
+dialog {
+  padding: 40px;
+  position: absolute;
+  margin-left: 600px;
+  margin-top: 100px;
+  border: white;
+  border-radius: 6px;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
-label{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
- }
- 
- 
- ::backdrop{
-     background-color: #a3a3a3;
-     opacity: 0.75;
- 
- }
-
- 
- .tasks{
-    color: blue;
- }
-
-#container{
-    display: flex;
-    padding: 20px;
-    justify-content: space-around;
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
 }
 
+::backdrop {
+  background-color: #a3a3a3;
+  opacity: 0.75;
+}
+
+.tasks {
+  color: blue;
+}
+
+#container {
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+}
 
 button {
-display: flex;
-justify-content: center;
-width: 100px;
-gap: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  gap: 10px;
 }
 
-
-div#sidebar{
-    display: flex;
-    align-items: center;
+div#sidebar {
+  display: flex;
+  align-items: center;
 }
 
-#divContent > div{
-    border: 1px solid black;
-    width: 300px;
+#divContent > div {
+  border: 1px solid black;
+  width: 300px;
 }
