@@ -1,15 +1,14 @@
 import { projects } from "./create-projects";
 
 class createTodo {
-  constructor(itemName, description, dueDate, priority, notes) {
+  constructor(itemName, description, dueDate, priority) {
     this.item = itemName;
     this.description = description;
     this.dueDate = dueDate;
     this.priority = priority;
-    this.notes = notes;
   }
 }
-const addTodo = function (itemName, description, dueDate, priority, notes) {
+const addTodo = function (itemName, description, dueDate, priority) {
   projects.forEach((object) => {
     const divContent = document.querySelector("#content");
     console.log(divContent.textContent);
@@ -19,9 +18,7 @@ const addTodo = function (itemName, description, dueDate, priority, notes) {
         description,
         dueDate,
         priority,
-        notes,
       );
-      console.log(object.todoItems);
     }
   });
 };

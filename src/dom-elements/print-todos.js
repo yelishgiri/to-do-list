@@ -14,13 +14,11 @@ const renderToDosToDom = function () {
         const divDescription = document.createElement("div");
         const divDuedate = document.createElement("div");
         const divPriority = document.createElement("div");
-        const divNotes = document.createElement("div");
         divTask.textContent = `Task: ${object.item}`;
         divDescription.textContent = `Description: ${object.description}`;
-        divDuedate.textContent = `DueDate: ${object.dueDate}`;
+        divDuedate.textContent = `Due Date: ${object.dueDate}`;
         divPriority.textContent = `Priority: ${object.priority}`;
-        divNotes.textContent = `Notes: ${object.notes}`;
-        div.append(divTask, divDescription, divDuedate, divPriority, divNotes);
+        div.append(divTask, divDescription, divDuedate, divPriority);
         appendDiv.appendChild(div);
         remove();
       });

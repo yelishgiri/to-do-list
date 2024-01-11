@@ -2,41 +2,32 @@ import { projects } from "./create-projects.js";
 import { addTodo } from "./create-to-do.js";
 import { renderToDosToDom } from "./dom-elements/print-todos.js";
 
+const callTaskSubmitButton = function (name) {
+  console.log("hello");
+  const dialogTask = document.getElementById("formForToDo");
+  const taskDialogSubmit = document.querySelector(".submitTask");
 
-const callTaskSubmitButton = (function(name) {
+  const taskName = document.querySelector("#taskName");
+  const taskDescription = document.querySelector("#taskDescription");
+  const taskDueDate = document.querySelector("#taskDueDate");
+  const taskPriority = document.querySelector("#taskPriority");
 
-    
-    
-    console.log("hello")
-    const dialogTask = document.getElementById('formForToDo') 
-    const taskDialogSubmit = document.querySelector('.submitTask')
+  taskDialogSubmit.addEventListener("click", (event) => {
+    event.preventDefault();
+    dialogTask.close();
 
-    const taskName = document.querySelector('#taskName')
-    const taskDescription = document.querySelector('#taskDescription')
-    const taskDueDate = document.querySelector('#taskDueDate')
-    const taskPriority = document.querySelector('#taskPriority')
-    const taskNotes = document.querySelector('#taskNotes')
+    projects.forEach((object) => {
+      const divContent = document.querySelector("#content");
+      if (object.name === divContent.textContent)
+        addTodo(
+          taskName.value,
+          taskDescription.value,
+          taskDueDate.value,
+          taskPriority.value,
+        );
+      renderToDosToDom();
+    });
+  });
+};
 
-    taskDialogSubmit.addEventListener("click",(event) => {
-        event.preventDefault();
-        dialogTask.close();
-
-        
-
-
-
-        projects.forEach((object) => {
-            const divContent = document.querySelector('#content')
-            if(object.name === divContent.textContent)            
-            addTodo(taskName.value,taskDescription.value,taskDueDate.value,taskPriority.value,taskNotes.value)
-            renderToDosToDom();
-        })
-
-
-
-    })
-    
-
-});
-
-export { callTaskSubmitButton }
+export { callTaskSubmitButton };
